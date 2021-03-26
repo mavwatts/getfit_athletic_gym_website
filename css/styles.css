@@ -57,6 +57,7 @@ ul{
     padding: 0;
 }
 
+
 button{
     cursor: pointer;
     background: #233EDE;
@@ -69,7 +70,7 @@ button{
     font-weight: 500;
     font-family: 'Roboto', 'Helvetica', 'Sans-serif';
     letter-spacing: 2px;
-
+    border-radius: 20px;
 }
 
 a{
@@ -77,7 +78,7 @@ a{
 }
 
 a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 p{
@@ -103,6 +104,20 @@ section, footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.cool-link:hover::after{
+    width: 100%;
+    transition: width .3s;
 }
 
 .box{
@@ -145,24 +160,28 @@ header nav ul li a{
     font-weight: 500;
 }
 
+header nav ul li a:hover{
+    color: greenyellow
+}
+
 #header-logo img{
     width: 12rem;
 }
 
-.top-gym-logo{
+.get-fit-logo{
     margin: 0 2rem;
     border: 2px solid #fff;
     padding: 10px 10px 7px;
 }
 
-.top-gym-logo a{
+.get-fit-logo a{
     font-size: 28px;
     text-transform: uppercase;
     color: #fff;
     line-height: 20px;
 }
 
-.top-gym-logo a:hover{
+.get-fit-logo a:hover{
     text-decoration: none;
 }
 
@@ -244,6 +263,28 @@ header nav ul li a{
     border-color: #fff;
 }
 /* End hero section styles */
+
+/* Start - advertising styles */
+#advertising{
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    background-color: #7cbf38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#advertising h3{
+    padding: 0;
+    margin: 0;
+}
+
+#advertising button{
+    margin-left: 10rem;
+}
+/* End - advertising styles  */
 
 /* Start - Features Section Styles */
 #features .box{
@@ -457,12 +498,11 @@ footer{
     background-size: cover;
     padding-bottom: 2rem;
     background-color: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,48,32,1) 89%, rgba(1,107,27,1) 100%, rgba(0,255,14,0) 100%);
-
+    padding: 2rem;
 }
 
 .footer-container{
-    max-width: 625px;
+    max-width: 620px;
     margin: 0 auto;
 }
 
@@ -486,8 +526,16 @@ footer ul li a{
     font-weight: 300;
 }
 
+footer ul li a:hover{
+    color: greenyellow;
+}
+
 footer .mailing-list{
     position: relative;
+}
+
+.mailing-list button:hover{
+    background-color: greenyellow;
 }
 
 footer input{
@@ -507,11 +555,12 @@ footer button{
     right: 2px;
     top: 2px;
     padding: 1.75rem 3rem;
+    border-radius: 0px;
 }
 
 footer ul.social-icons{
     max-width: 400px;
-    margin: 4rem auto 3rem;
+    margin: 2rem 4rem;
 }
 
 footer ul.social-icons li a{
@@ -523,6 +572,7 @@ footer small {
     opacity: 0.8;
     font-weight: 300;
     margin: 0 0.5rem;
+    text-decoration: underline;
 }
 
 footer small a{
@@ -623,6 +673,7 @@ footer small a{
 /* Start - Font Awesome styles */
 .box .fas{
     color: greenyellow;
+    margin-top: 1rem;
 }
 /* End - Font Awesome styles */
 
@@ -638,7 +689,7 @@ footer small a{
         max-width: 775px;
     }
 
-    .top-gym-logo{
+    .get-fit-logo{
         margin: 0 1rem;
     }
 
@@ -825,3 +876,54 @@ footer small a{
 }
 
 /* End - media queries  */
+
+/* About - start code */
+    #about_picture{
+        height: 25vw;
+        background-image: url('/Users/mavrickwatts/Desktop/Web_Portfolio/JAVASCRIPT/Getfit_website/images/getfit_gym_image_8.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        background-blend-mode: color-burn;
+        background-color: #9e9da76b;
+        padding-top: 5rem;
+    }
+
+    #about_section{
+        height: 15vw;
+        width: 100vw;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #about{
+        width: 1000px;
+        height: fit-content;
+    }
+
+    #about h3 {
+        color: #111;
+        letter-spacing: 15px;
+        text-decoration: underline 3px solid #111;
+        -webkit-text-stroke: medium;
+        margin-bottom: 1rem;
+    }
+
+    #about p{
+        width: 850px;
+        text-align: left;
+        padding-left: 4rem;
+        color: #111;
+    }
+
+    #gym_info{
+        width: 400px;
+        border: 2px solid #111;
+        padding: 10px 0 0 0;
+    } 
+    
+    #gym_info h4{
+        color: #111;
+    }
+/* About - end code  */
